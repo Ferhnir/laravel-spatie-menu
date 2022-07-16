@@ -1,0 +1,22 @@
+{
+    "name": "ferhnir/laravel-spatie-menu",
+    "description": "Laravel Spatie/Menu with Bootstrap for Laravel 9",
+    "type": "library",
+    "require": {
+        "php": "^8.0",
+        "laravel/framework": "^v9.0",
+        "spatie/laravel-menu": "^4.1"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Ferhnir\\LaravelSpatieMenu\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Maksymilian Zdunski"
+        }
+    ],
+    "minimum-stability": "dev"
+}
