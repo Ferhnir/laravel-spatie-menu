@@ -11,6 +11,7 @@ class LaravelSpatieMenuService extends Menu
      * @param string|null $class
      * @param string|null $parentClass
      * @param array $attrs
+     * @param string|null $uniqueSubmenuID
      * @param string|null $wrapperTag
      * @param bool $parentTag
      * @param bool $activeClassOnLink
@@ -30,7 +31,7 @@ class LaravelSpatieMenuService extends Menu
 
         if ($uniqueSubmenuID) {
             $class .= ' collapse';
-            $parentClass = 'nav-item';
+            $parentClass = $parentClass ?? 'nav-item';
             $attrs = [
                 'id' => $uniqueSubmenuID
             ];
@@ -88,7 +89,6 @@ class LaravelSpatieMenuService extends Menu
 
         if ($uniqueSubmenuID)
             $attributes = [...$attributes ,...$submenuAttrs];
-
 
         return Link::to($route, $icon . $title)
             ->addClass($class)
